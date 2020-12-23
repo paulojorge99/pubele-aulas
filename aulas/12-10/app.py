@@ -11,8 +11,8 @@ from bd import proverbios, pessoas
 app = Flask(__name__)
 
 
-s = shelve.open('proverbios.db')
-
+s = shelve.open('proverbios.db','r')
+print(list(s.items()))
 
 @app.route('/')
 def index():
